@@ -26,7 +26,7 @@ $(function() {
       itemCount += 1;
       //print an html <div> into the DOM containing some of the data from the Task as well as a button to mark the task as complete
       $('div#to-do-tasks').prepend('<div class="well task item' + itemCount + '">' + 'I need to ' + toDoTask.description + ' before ' + toDoTask.deadline +
-                                      '<button class="btn mark-complete item' + itemCount + '">' +
+                                      '<button class="btn action-button item' + itemCount + '">' +
                                         '<span class="glyphicon glyphicon-ok"></span>' +
                                       '</button>' +
                                     '</div>');
@@ -40,25 +40,21 @@ $(function() {
       }
       //clear the form fields
       $('form#task-form').trigger('reset');
-      //attach a click event handler to the button inside of the Task item
+
+      //attach a click event handler to the button inside of the task-item
       $('button.item' + itemCount).click(function() {
         //increase the running count of completed-tasks by 1
         completedCount +=1;
         //hide the task-item of the button that was clicked and print an html <div> into the DOM containing the same information as the hidden task-item
         $(this).parent().hide();
         $('div#completed-tasks').prepend('<div class="well task completed-task' + completedCount + '">' + 'I need to ' + toDoTask.description + ' before ' + toDoTask.deadline +
-                                            '<button class="btn delete-item">' +
-                                              '<span class="glyphicon glyphicon-remove-circle"></span>' +
+                                            '<button class="btn action-button delete-item' + completedCount + '">' +
+                                              '<span class="glyphicon glyphicon-remove"></span>' +
                                             '</button>' +
                                           '</div>');
-        //determine what the border color of the completed-task div needs to be and add the corresponding class
-        // if ($(this).parent().hasClass('yellow-bg')) {
-        //   $('div.completed-task' + completedCount).addClass('yellow-bg');
-        // } else if ($(this).parent().hasClass('orange-bg')) {
-        //   $('div.completed-task' + completedCount).addClass('orange-bg');
-        // } else if ($(this).parent().hasClass('red-bg')) {
-        //   $('div.completed-task' + completedCount).addClass('red-bg');
-        // }
+        //hide the line of placeholder text
+        $('#placeholder').hide();
+        //determine what the border color of the completed-task div needs to be and add the corresponding classs
         if (toDoTask.importance === 1) {
           $('div.completed-task' + completedCount).addClass('yellow-border');
         } else if (toDoTask.importance === 2) {
@@ -66,6 +62,10 @@ $(function() {
         } else if (toDoTask.importance === 3) {
           $('div.completed-task' + completedCount).addClass('red-border');
         }
+        //attach a click event handler to the button inside of each completed-task item
+        $('button.delete-item' + completedCount).click(function() {
+          $(this).parent().hide();
+        });
       });
     }
   });

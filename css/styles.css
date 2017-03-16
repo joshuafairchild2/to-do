@@ -1,13 +1,11 @@
 #header {
   text-align: center;
+  font-family: lobster;
+  font-size: 60px;
 }
 
-#to-do {
-
-}
-
-#completed {
-
+#completed-tasks {
+  text-decoration: line-through;
 }
 
 .task, .completed-task {
@@ -15,7 +13,7 @@
   height: 75px;
 }
 
-.mark-complete, .delete-item {
+.action-button {
   height: 30px;
   vertical-align: middle;
   float: right;
@@ -43,4 +41,15 @@ select:invalid {
 
 option {
   color: black;
+}
+
+h3 {
+  font-family: lobster;
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+h4 {
+  font-family: lobster;
+  font-size: 22px;
 }
