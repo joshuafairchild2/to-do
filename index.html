@@ -12,12 +12,26 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6" id='to-do'>
-          <h3>To Do</h3>
+          <h3>Add a Task</h3>
           <div class="well">
             <form id='task-form'>
               <div class="form-group">
+                <label for="add-task">Task description</label>
+                <input type="text" class="form-control" id='add-task' placeholder="I need to...">
+              </div>
+              <div class="form-group">
+                <label for="add-time">Deadline</label>
+                <input type="text" class="form-control" id='add-deadline' placeholder="Before...">
+              </div>
+              <div class="form-group">
+                <label for="add-importance">Importance</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" id='add-task' placeholder="I need to...">
+                  <select class="form-control" id="add-importance" required>
+                    <option value='' disabled selected hidden>Select importance</option>
+                    <option value="1">Not very important</option>
+                    <option value="2">More impotant</option>
+                    <option value="3">Very important</option>
+                  </select>
                   <span class="input-group-btn">
                     <button class="btn btn-info" type="submit">Add</button>
                   </span>

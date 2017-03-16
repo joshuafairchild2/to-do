@@ -12,13 +12,34 @@
 
 .task, .completed-task {
   border: solid 3px black;
-  background-color: lightyellow;
+  /*background-color: lightyellow;*/
+  line-height: 30px;
+  height: 75px;
 }
 
-.mark-complete, .delete {
+.mark-complete, .delete-item {
+  height: 30px;
+  vertical-align: middle;
   float: right;
 }
 
+.yellow-bg {
+  background-color: lightyellow;
+}
+.orange-bg {
+  background-color: orange;
+}
+.red-bg {
+  background-color: red;
+}
 body {
   background-color: skyblue;
+}
+
+select:invalid {
+  color: #999;
+}
+
+option {
+  color: black;
 }
