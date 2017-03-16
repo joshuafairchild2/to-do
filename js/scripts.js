@@ -40,6 +40,8 @@ $(function() {
       }
       //clear the form fields
       $('form#task-form').trigger('reset');
+      //display header text for the item list
+      $('#tasks-header').hide();
 
       //attach a click event handler to the button inside of the task-item
       $('button.item' + itemCount).click(function() {
@@ -64,6 +66,7 @@ $(function() {
         }
         //attach a click event handler to the button inside of each completed-task item
         $('button.delete-item' + completedCount).click(function() {
+          //hide the completed-item of the button that was clicked
           $(this).parent().hide();
         });
       });

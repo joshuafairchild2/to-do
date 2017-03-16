@@ -8,15 +8,30 @@
   text-decoration: line-through;
 }
 
+#completed h3, #to-do h3 {
+  font-family: lobster;
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+#tasks-header {
+  font-family: lobster;
+  margin-top: 40px;
+}
+
 .task, .completed-task {
-  line-height: 30px;
-  height: 75px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
 }
 
 .action-button {
-  height: 30px;
   vertical-align: middle;
-  float: right;
+  margin-left: 15px;
+  border: solid 3px black;
 }
 
 .yellow-border {
@@ -41,12 +56,6 @@ select:invalid {
 
 option {
   color: black;
-}
-
-h3 {
-  font-family: lobster;
-  font-size: 40px;
-  text-decoration: underline;
 }
 
 h4 {
