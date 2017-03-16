@@ -10,11 +10,12 @@
 
 }
 
-.task {
+.task, .completed-task {
   border: solid 3px black;
+  background-color: lightyellow;
 }
 
-.mark-complete {
+.mark-complete, .delete {
   float: right;
 }
 
