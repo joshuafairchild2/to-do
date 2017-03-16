@@ -11,8 +11,6 @@
 }
 
 .task, .completed-task {
-  border: solid 3px black;
-  /*background-color: lightyellow;*/
   line-height: 30px;
   height: 75px;
 }
@@ -23,15 +21,18 @@
   float: right;
 }
 
-.yellow-bg {
-  background-color: lightyellow;
+.yellow-border {
+  border: solid 5px #e6e600;
 }
-.orange-bg {
-  background-color: orange;
+
+.orange-border {
+  border: solid 5px #ff6600;
 }
-.red-bg {
-  background-color: red;
+
+.red-border {
+  border: solid 5px #e62e00;
 }
+
 body {
   background-color: skyblue;
 }
