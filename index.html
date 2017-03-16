@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>TM2K</title>
+  </head>
+  <body>
+    <h1 id='header' class="jumbotron">Task Master 2000</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6" id='to-do'>
+          <h3>To Do</h3>
+          <div class="well">
+            <form id='task-form'>
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id='add-task' placeholder="I need to...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-info" type="submit">Add</button>
+                  </span>
+                </div>
+              </div>
+            </form>
+            <div id='to-do-tasks'>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6" id='completed'>
+          <h3>Completed</h3>
+          <div class="well">
+            <ul id='completed-tasks'>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

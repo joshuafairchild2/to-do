@@ -1,0 +1,23 @@
+#header {
+  text-align: center;
+}
+
+#to-do {
+
+}
+
+#completed {
+
+}
+
+.task {
+  border: solid 3px black;
+}
+
+.mark-complete {
+  float: right;
+}
+
+body {
+  background-color: skyblue;
+}
