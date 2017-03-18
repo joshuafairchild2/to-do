@@ -45,7 +45,7 @@ $(function() {
 
       //clear the form fields and remove placeholder text from tasks area
       $('form#task-form').trigger('reset');
-      $('#tasks-header').hide();
+      $('#placeholder-todo').hide();
 
       //attach a click event handler to the button inside of the task-item
       $('button.item' + itemCount).click(function() {
@@ -61,7 +61,7 @@ $(function() {
                                           '</div>');
 
         //hide the line of placeholder text from "Completed Tasks" area
-        $('#placeholder').hide();
+        $('#placeholder-complete').hide();
 
         //determine what the color scheme of the completed-task div needs to be and add the corresponding class
         if (toDoTask.importance === 1) {
