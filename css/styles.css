@@ -14,9 +14,13 @@
   text-decoration: underline;
 }
 
-#tasks-header {
-  font-family: lobster;
+#placeholder-todo {
+  font-family: fjalla one, helvetica;
   margin-top: 40px;
+}
+
+#placeholder-complete {
+  font-family: fjalla one, helvetica;  
 }
 
 .task, .completed-task {
@@ -36,14 +40,17 @@
 
 .yellow-border {
   border: solid 5px #e6e600;
+  background-color: #ffff84;
 }
 
 .orange-border {
   border: solid 5px #ff6600;
+  background-color: #ffb889;
 }
 
 .red-border {
   border: solid 5px #e62e00;
+  background-color: #ff7f7f;
 }
 
 body {
@@ -56,9 +63,4 @@ select:invalid {
 
 option {
   color: black;
-}
-
-h4 {
-  font-family: lobster;
-  font-size: 22px;
 }
